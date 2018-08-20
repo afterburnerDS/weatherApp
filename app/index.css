@@ -1,0 +1,41 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+.container,
+#app {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background: white;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: pink;
+    align-content: stretch;
+
+}
+
+.zipForm{
+
+
+    display: flex;
+    flex-direction: column
+    
+
+}
