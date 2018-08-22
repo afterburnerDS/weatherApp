@@ -5,6 +5,7 @@ var Nav = require('./Nav')
 var Home = require('./Home');
 var Forecast = require('./Forecast')
 var ZipCodeForm = require('./ZipCodeForm');
+var Detail = require('./Detail');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
@@ -18,6 +19,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={ZipCodeForm} />
           <Route exact path='/forecast' component={Forecast} />
+          <Route exact path='/detail' component={Detail}
+          />
         </Switch>
         </div>
       </Router>

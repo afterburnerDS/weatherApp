@@ -1,10 +1,11 @@
 var React = require('react');
 var Link = require('react-router-dom').Link;
 var ZipCodeForm = require('./ZipCodeForm');
+var Weather = require('./Weather');
 var Loading = require('./Loading');
 var api = require('../utils/api')
 
- class Home extends React.Component {
+ class Forecast extends React.Component {
 
   constructor(props) {
     super(props);
@@ -35,9 +36,7 @@ updateForecast(city){
 }
   render() {
 
-    if(this.state.forecast){
-      console.log(this.state.forecast)
-    }
+   var city = this.props.location.search.split('=')[1];
 
     
     return (
@@ -46,11 +45,12 @@ updateForecast(city){
          {!this.state.forecast
                     ? <Loading /> : 
                     
-                 <div>
-                   
-                   </div>   } 
+                 <Weather weather={this.state.forecast} city={city}
+                  /> 
+              
+              } 
       </div>
     )
   }
 }
- module.exports = Home;
+ module.exports = Forecast;
